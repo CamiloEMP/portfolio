@@ -1,0 +1,13 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<h3
+  class="w-fit py-2 px-6 text-primary bg-primary bg-opacity-40 font-bold rounded text-3xl uppercase font-titillium"
+>
+  {title}
+</h3>
