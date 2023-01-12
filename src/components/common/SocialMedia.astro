@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon"
+// Check the Doc
+export interface Props {
+  newClass?: string
+}
+
+const { newClass } = Astro.props
+---
+
+<div class={`flex gap-2 ${newClass ?? ""}`}>
+  <a href="https://github.com/CamiloEMP" target="_blank">
+    <Icon
+      name="mdi:github"
+      class="w-8 h-8 hover:scale-110 transition-transform"
+    />
+  </a>
+  <a href="https://www.linkedin.com/in/camilo-mora/" target="_blank">
+    <Icon
+      name="mdi:linkedin"
+      class="w-8 h-8 hover:scale-110 transition-transform"
+    />
+  </a>
+  <a href="https://www.instagram.com/camilo___e/" target="_blank">
+    <Icon
+      name="mdi:instagram"
+      class="w-8 h-8 hover:scale-110 transition-transform"
+    />
+  </a>
+</div>
