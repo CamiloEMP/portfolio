@@ -1,0 +1,42 @@
+---
+import { technologies, type KeysTechnologies } from "@constants/technologies"
+
+export interface Props {
+  title: string
+  img: string
+  stack: KeysTechnologies[]
+}
+
+const { img, stack, title } = Astro.props
+const stackWithIcon = stack.map((item) => technologies[item])
+
+console.log(stackWithIcon)
+---
+
+<article class="max-w-4xl mx-auto grid grid-cols-2 font-inter">
+  <div class="w-96 space-y-4">
+    <span class="border-b-2 text-xl font-semibold border-primary">{title}</span>
+    <img
+      class="object-cover"
+      src={`/projects/${img}`}
+      alt={`Projecto ${title} hecho por Camilo Mora`}
+    />
+  </div>
+  <div class="flex flex-col justify-between pt-10">
+    <slot />
+    <div class="flex gap-4">
+      {
+        stackWithIcon.map((stack) => (
+          <div class="flex items-center gap-1">
+            <img
+              src={stack.img}
+              class={stack.name === "Tailwind" ? "w-6 h-4" : "w-5"}
+              alt=""
+            />
+            <span class="font-semibold">{stack.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</article>
