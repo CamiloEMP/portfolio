@@ -44,12 +44,12 @@ export const technologies: ITechologies = {
   },
   'javascript': {
     img: '/technologies/javascript.svg',
-    name: 'HTML5',
+    name: 'JavaScript',
     category: 'scencials'
   },
   'html': {
     img: '/technologies/html5.svg',
-    name: 'JavaScript',
+    name: 'HTML5',
     category: 'scencials'
   },
   'css': {

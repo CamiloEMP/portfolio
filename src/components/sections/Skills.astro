@@ -1,8 +1,8 @@
 ---
-import Title from "@components/common/Title.astro"
-import type { IStacks } from "@components/Stack.astro"
-import Stack from "@components/Stack.astro"
 import { technologies } from "@constants/technologies"
+import type { IStacks } from "@components/Stack.astro"
+import Title from "@components/common/Title.astro"
+import Stack from "@components/Stack.astro"
 
 const stacks: IStacks = {
   main: [],
@@ -25,7 +25,9 @@ Object.entries(technologies).forEach(([_, tech]) => {
 
 <section class="wrapper mx-auto space-y-12">
   <Title>Tecnologias</Title>
-  <div class="flex gap-8 max-w-5xl flex-wrap mx-auto">
+  <div
+    class="flex gap-8 justify-center md:justify-start max-w-5xl flex-wrap mx-auto"
+  >
     <Stack stack={stacks.main}>Uso principalmente</Stack>
     <Stack stack={stacks.worked}>He trabajado con</Stack>
     <Stack stack={stacks.scencials}>Claramente las uso</Stack>
