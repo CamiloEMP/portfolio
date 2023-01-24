@@ -1,11 +1,9 @@
 ---
-import ProjectCard from "../common/cards/ProjectCard.astro"
-import Title from "../common/Title.astro"
+import HomeLayout from "@layouts/HomeLayout.astro"
+import ProjectCard from "@components/common/cards/ProjectCard.astro"
 ---
 
-<section class="wrapper mx-auto space-y-12">
-  <!-- TODO: Add other projects -->
-  <Title>Projectos destacados</Title>
+<HomeLayout title="Projectos destacados">
   <ProjectCard
     title="Ecommerce"
     urlGithub="https://github.com/CamiloEMP/e-commerce"
@@ -33,4 +31,4 @@ import Title from "../common/Title.astro"
   >
     <p>Proyecto realizado para aprender mas sobre NextJS y Typescript</p>
   </ProjectCard>
-</section>
+</HomeLayout>
